@@ -14,7 +14,6 @@ public class CinemaRepository {
 
     @Autowired
     private CinemaCrudRepository cinemaCrudRepository;
-
     public List<Cinema> getAll(){
         return (List<Cinema>) cinemaCrudRepository.findAll();
     }
@@ -24,5 +23,6 @@ public class CinemaRepository {
     public Cinema save(Cinema c){
         return cinemaCrudRepository.save(c);
     }
+    public void delete(Cinema c){cinemaCrudRepository.delete(c);}
 }
 
